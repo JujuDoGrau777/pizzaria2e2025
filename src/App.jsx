@@ -4,11 +4,10 @@ function App(){
 
  const [nome, setNome] = useState ('Ronaldo')
 
-  return (
+  const Formulario = ()=>{
+    return (
     <div>
-      <h3>Pizzaria 2E</h3>
-
-    <input 
+      <input 
       className = "nome"
       onChange={(e)=>{setNome(e.target.valuegit)}}
       type="text" />
@@ -19,6 +18,20 @@ function App(){
     >
       CLIQUE AQUI
     </button>
+   </div>
+    )
+  }
+
+  return (
+    <div>
+      <h3>Pizzaria 2E</h3>
+
+    
+    <Formulario />
+    <Formulario />
+    <Formulario />
+    <Formulario />
+
 
     </div>
   )

@@ -4,11 +4,11 @@ function App(){
  
   const [nome, setNome] = useState('Ronaldo')
   const [idade, setIdade] = useState(18)
-  const [time, setTime] = useState('Vai Corinthians')
+  const [time, setTime] = useState('Santos FC')
   const [pi] = useState(3.14)
  
   //var idade = 18;
-  //let time = 'Vai Corinthians';
+  //let time = 'Santos FC';
   //const pi = 3.14;
  
   const Formulario = (props) => {

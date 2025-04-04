@@ -4,30 +4,33 @@ function App(){
  
   const [nome, setNome] = useState('Ronaldo')
   const [idade, setIdade] = useState(18)
-  const [time, setTime] = useState('Corinthians')
+  const [time, setTime] = useState('Vai Corinthians')
   const [pi] = useState(3.14)
  
   //var idade = 18;
-  //let time = '';
+  //let time = 'Vai Corinthians';
   //const pi = 3.14;
  
-  const Formulario = (props)=> {
+  const Formulario = (props) => {
+    const [valor, setValor] = useState()
    
     return (
       <div>
         <input
           className = "nome"
           placeholder= {props.sombra}
-          onChange={(e)=>{setNome(e.target.value)}}
+          onChange={(e)=>{setValor(e.target.value)}}
           type="text" />
  
         <button
           className="botao"
           onClick={()=>{
-            if(valor.lenght > 0 )
+            if(valor.length > 0){
               alert(valor);
-            else
-            alert(props.nome + 'idade é ' + props.idade);
+            }
+            else{
+              alert(props.nome + ' idade é ' + props.idade);
+            }
             }}      
         >
           CLIQUE AQUI
@@ -41,16 +44,15 @@ function App(){
     <div>
       <h3>Pizzaria 2E</h3>
  
-      <Formulario nome="Ricardo" 
-      idade={45}
-      sombra="Digite nome..."/>
+      <Formulario nome="Ricardo"
+          idade={45}
+          sombra="Digite nome..." />
       <Formulario nome="Maria" sombra="Digite sua idade..."/>
-      <Formulario nome="Tomas" sombra="Digite seu time..."/>
-      <Formulario nome="Antonieta" sombra="valor de pi"/>
+      <Formulario nome="Tomas" sombra="Digite seu time..." />
+      <Formulario nome="Antonieta" sombra="valor de pi" />
  
     </div>
   )
 }
  
 export default App
- 
